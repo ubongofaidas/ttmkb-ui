@@ -1,0 +1,263 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/datatables.min.css"> 
+<link rel="stylesheet" type="text/css" href="css/styles.css">   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="shortcut icon" href="/images/t-favicon.png" type="image/x-icon">  
+<title>TANZANIAN TRADITIONAL MEDICINE KNOWLEDGE BASE | TTMKB HOME</title>
+</head><!--/end of head-->
+<body>
+<header class="main-header">
+<nav class="navbar navbar-toggleable-sm">
+<div class="container">
+<button class="custom-toggler navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#content" aria-controls="content" aria-expanded="false" aria-label="toggle Navigation" >
+<i class="fa fa-bars "></i>
+</button>
+<a href="index.html" class="navbar-brand logo"><span>TTM</span>KB</a>
+<div class=" collapse navbar-collapse " id="content" >     
+<div class="navbar-nav ml-auto">
+<a class="nav-item nav-link active " href="index.html">Home</a>
+<a  class="nav-item nav-link" href="about.html" >About</a>    
+<a class="nav-item nav-link" href="all_medicine.html">All Medicines</a>   
+<a  class="nav-item nav-link" href="contact.html" >Contact</a>
+<a href="#crt-acc" class="nav-item nav-link"  data-toggle="modal" data-target="#crt-acc"><i class="fa fa-user"></i></a>
+<!--modal create account-->
+<div class="create-account modal" id="crt-acc" tabindex="-1" role="dialog" aria-labelledby="crt-acc">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content"> 
+<div class="modal-body">    
+<!--login-->
+<div class="login" id="login">
+<div class="log-head">
+<h5>Login to your account</h5>
+</div>
+<form class="form-group" role="form" method="POST" action="/login.php">
+<div class="form-group">
+<label class="" for="lemail">Enter your email</label>
+<div class="input-group">
+<input type="email" name="lemail" class="form-control" id="lemail"
+placeholder="jere@ttmkb.com" required>
+</div>
+</div>
+<div class="form-group">
+<label class="" for="pwd">Enter your password</label>
+<div class="input-group">
+<input type="password" name="pwd" class="form-control" id="pwd"
+placeholder="password" required>
+</div>
+</div>
+<div class="check-link mb-3">
+<div class="form-check">
+<label class="form-check-label">
+<input class="form-check-input" name="remember" type="checkbox">
+<span>Remember me</span>
+</label>
+</div>
+<div class="pwd-link">
+<span><a href="#pwdReset" id="topwdReset">Forgot your password?</a></span>
+</div>
+</div>    
+<div class="form-group">
+<input type="submit" id="signIn" class="form-control signIn" value="LOGIN">
+</div>
+<div class="acc-link mb-3">
+<p>New member? <a href="#register" id="toRegister">Create account</a></p>
+</div>
+</form>
+</div>
+<!--register-->
+<div class="register" id="register">
+<div class="reg-head">   
+<h5>Create An account</h5>
+</div>
+<form class="form-group" role="form" method="POST" action="/register.php">
+<div class="form-group">
+<label class="" for="rname">Enter full name </label>
+<div class="input-group">
+<input type="text" name="rname" class="form-control" id="rname"
+placeholder="i.e mahenda jeremiah" required>
+</div>
+</div>    
+<div class="form-group">
+<label class="" for="remail">Enter your email</label>
+<div class="input-group">
+<input type="email" name="remail" class="form-control" id="remail"
+placeholder="jere@ses.ac.tz" required>
+</div>
+</div>
+<div class="form-group">
+<label class="" for="rpwd">Enter your password</label>
+<div class="input-group">
+<input type="password" name="rpwd" class="form-control" id="rpwd"
+placeholder="password" required>
+</div>
+</div>
+<div class="form-group">
+<label class="" for="Crpwd">Confirm Your Password </label>
+<div class="input-group">
+<input type="password" name="Crpwd" class="form-control" id="Crpwd"
+placeholder="password" required>
+</div>
+</div> 
+<div class="form-check">
+<label class="form-check-label">
+<input class="form-check-input" name="term" type="checkbox" required>
+<span>Agree with our <a href="#">term</a> and <a href="#">privacy</a></span>
+</label>
+</div>    
+<div class="form-group">
+<input type="submit" id="signup" class="form-control signup" value="REGISTER">
+</div>    
+<div class="acc-link mb-3">
+<p>Already a member? <a href="#login" id="tologin">Login</a></p>
+</div>
+</form>
+</div>
+<!--reset password-->
+<div class="pwdReset" id="pwdReset">
+<div class="pw-head">
+<h5>Reset Your Password</h5>    
+</div>
+<form class="form-group" role="form" method="POST" action="/rstpass.php">
+<div class="form-group">
+<label class="" for="rstpass">Enter  your email</label>
+<div class="input-group">
+<input type="email" name="rstpass" class="form-control" id="rstpass"
+placeholder="Enter your email" required>
+</div>
+</div>
+<div class="form-group">
+<input type="submit" id="rstpass" class="form-control rstpass" value="SEND NEW">
+</div>
+<div class="acc-link mb-3">
+<p>Not a member? <a href="#register" id="toRegister">Create account</a></p>
+</div>
+</form>
+</div>
+</div>
+</div>    
+</div>
+</div>    
+<a href="#lang" class="nav-item nav-link"><i class="fa fa-globe"></i><div class="text-success"></div></a>    
+</div>
+</div>
+</div>
+</nav>
+<div class="intro jumbotron">
+<div class="container pb-5">
+<div class="row">
+<div class="col-lg-8 offset-lg-2"> 
+<div class="intro-text">
+<h1>WHAT YOU'RE LOOKING FOR:</h1>  
+</div>    
+<form class="advanced-search p-2" action="#">
+<input class="adv-search-input" type="text" placeholder="Enter keyword" tabindex="0" name="search">
+<select name="Keyword" title="keywords" class="opt-select">
+<option value="FullText">Full Keyword</option>
+<option value="firsstletter">Some of this</option>
+</select> 
+<select name="where" title="where" class="opt-select">
+<option value="medicine">in medicines</option>
+<option value="approved">in approved medicines</option>
+<option value="disease">in diseases</option>
+<option value="references">in references</option>    
+</select>     
+<button class="adv-search-sb" ype="submit" title="search"><i class="fa fa-search"></i></button>
+</form>    
+</div>
+</div>    
+</div>
+</div>    
+</header><!--/end of header-->
+
+<div class="subscribe">
+<div class="container">
+<div class="subsblock m-0 p-2">  
+<h5 class="text-center p-2">PLEASE SUBSCRIBE FOR MONTHLY NEWSLETTER</h5>     
+<div class="row">  
+<div class="col-lg-10 offset-lg-1">  
+<form class="subsform pb-4" action="" method="post"> 
+<input class="subsname" type="text" name="name" placeholder="Enter your name">    
+<input class="subsmail" type="email" name="Email" placeholder="Enter your email">    
+<button class="subs-sb" style=" background:green; color: white;border:1px solid green; border-radius: 0; cursor: pointer;" type="submit" title="send"><i class="fa fa-paper-plane"></i></button>   
+</form>    
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-area">
+<div class="footer">
+<div class="container">
+<div class="row">    
+<div class="col-lg-4 footer-one">
+<h6 class="footer-logo"><span>TTM</span>KB</h6>
+<p class="mt-2">TTMKB is an abbreviation of Tanzanian traditional medicine knowledge base it provide all information  about traditional medicine found in Tanzania according to scientific research conducted.<a href="about.html"><span>read more</span></a></p>
+</div>
+<div class="col-lg-3 footer-two">
+<h6>SUPPORT </h6>
+<ul class="">
+<li class="link-item"><a class="text-item " href="help.html">Help</a></li>
+<li class="link-item"><a class="text-item " href="faq.html">FAQ</a></li>
+<li class="link-item"><a class="text-item" href="about.html">Location</a></li>
+<li class="link-item"><a class="text-item " href="contact.html">Contact us</a></li>
+</ul>
+</div>
+<div class="col-lg-3 footer-three">
+<h6>ABOUT US</h6>
+<ul>
+<li class="link-item"><a class="text-item" href="about.html">What is TTMKB</a></li>
+<li class="link-item"><a class="text-item" href="about.html">why TTMKB</a></li>
+<li class="link-item"><a class="text-item" href="about.html">Our Contents</a></li>
+<li class="link-item"><a class="text-item" href="about.html">Our Developers</a></li>
+</ul>
+</div>
+<div class="col-lg-2 footer-four">
+<h6>TERM &amp; PRIVACY</h6>
+<ul>
+<li class="link-item"><a class="text-item" href="editor.html">Editorial Privacy</a></li>
+<li class="link-item"><a class="text-item" href="privacy.html">Privacy Policy</a></li>
+<li class="link-item"><a class="text-item" href="term.html">Term of Use</a></li>
+<li class="link-item"><a class="text-item" href="reference.html">References</a></li>
+</ul>
+</div>
+</div>  
+</div>
+</div><!--end of main-footer-->
+<div class="social-icons-block">
+<div class="container"> 
+<div class="row">
+<div class="col-sm-12 text-center">    
+<a href="https://www.facebook.com/mahendadev" class="social-icons"><i id="social-fb" class="fa fa-2x fa-facebook-square social"></i></a>
+<a href="https://twitter.com/mahendadev" class="social-icons"><i id="social-tw" class="fa fa-2x fa-twitter-square social"></i></a>
+<a href="https://youtube.com/mahendadev" class="social-icons"><i id="social-gp" class="fa fa-2x fa-youtube-square social"></i></a>
+<a href="mahendadev@gmail.com" class="social-icons"><i id="social-em" class="fa fa-2x fa-rss-square social"></i></a>
+</div> 
+</div>
+</div>
+</div>    
+<div class="footer-bottom">
+<div class="container">
+<div class="row">
+<div class="col-sm-12 text-center">
+<div class="copyright-text">
+<p class="m-0 pt-2">CopyRight © 2018 Digital All Rights Reserved</p>
+</div><!-- End Copyright -->
+</div> 
+</div>
+</div>
+</div>
+</div>
+
+<script src="js/jquery-3.3.1.js"></script>  
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>  
+</body>
+</html>
