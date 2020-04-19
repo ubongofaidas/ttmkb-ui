@@ -30,4 +30,4 @@ jQuery
 
 bootstrap 4 mult-item carousel plugin.
 
-please refer to 
+please refer to  GNU GENERAL PUBLIC LICENSE.
