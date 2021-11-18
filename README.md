@@ -1,5 +1,5 @@
 # ttmkb-ui
-Traditional medicine website ui. here a preview  ubongofaidas.github.io/ttmkb-ui/. 
+Traditional medicine website ui. here a preview  https://ubongofaidas.github.io/ttmkb-ui/
 
 # Features:
 
